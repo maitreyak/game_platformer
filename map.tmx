@@ -3,12 +3,23 @@
  <tileset firstgid="1" name="bareland" tilewidth="32" tileheight="32">
   <image source="images/bareland.png" width="96" height="64"/>
  </tileset>
+ <tileset firstgid="7" name="player" tilewidth="32" tileheight="32">
+  <image source="images/redblock.png" width="32" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="player" value=""/>
+   </properties>
+  </tile>
+ </tileset>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2BgACOVzaKWeYwMlJvHiANTyxxSzSNkDinmEWsWMeaRYhYt8CigDAAAnNAASg==
+   eJxjYBgFo2BgACOVzaKWeYwMlJvHiANTyxxSzSNkDrp57FQwixj3kWIWLfAooAwAAKvoAFE=
   </data>
  </layer>
- <objectgroup color="#a40a09" name="floor" width="20" height="20" visible="0">
+ <objectgroup color="#a40a09" name="floor" width="20" height="20">
+  <properties>
+   <property name="floor" value=""/>
+  </properties>
   <object name="floor" x="609" y="227" width="31" height="29"/>
   <object name="floor" x="578" y="259" width="31" height="29"/>
   <object name="floor" x="546" y="291" width="31" height="29"/>

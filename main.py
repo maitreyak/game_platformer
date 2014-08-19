@@ -1,7 +1,7 @@
 import pygame
 import tmx
 
-class Platform:
+class Platform(object):
     
     def __init__(self,screen):
         self.screen = screen
