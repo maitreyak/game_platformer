@@ -1,15 +1,20 @@
 import pygame
-
-
+import tmx
 
 class Platform:
+    
     def __init__(self,screen):
         self.screen = screen
+        self.tilemap = None
+    
     def start(self):
 
         #init the game clock
         clock = pygame.time.Clock()
         
+        #load the tile map
+        self.tilemap = tmx.load('maps/map.tmx',self.screen.get_size())
+
         #main event loop of the game
         while True:
             

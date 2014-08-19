@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="bareland" tilewidth="32" tileheight="32">
+     <image source="images/bareland.png" width="96" height="64"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BgACOVzaKWeYwMlJvHiANTyxxSzSNkDinmEWsWMeaRYhYt8CigDAAAnNAASg==
+  </data>
+ </layer>
+ <objectgroup color="#a40a09" name="floor" width="20" height="20">
+  <object name="floor" x="609" y="227" width="31" height="29"/>
+  <object name="floor" x="578" y="259" width="31" height="29"/>
+  <object name="floor" x="546" y="291" width="31" height="29"/>
+  <object name="floor" x="448" y="323" width="99" height="25"/>
+  <object name="floor" x="385" y="356" width="68" height="28"/>
+  <object name="floor" x="321" y="388" width="67" height="30"/>
+  <object name="floor" x="289" y="419" width="31" height="29"/>
+  <object name="floor" x="256" y="451" width="31" height="29"/>
+  <object name="floor" x="1" y="484" width="254" height="30"/>
+  <object name="floor" x="609" y="229" width="31" height="29"/>
+ </objectgroup>
+</map>
