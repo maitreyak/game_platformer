@@ -6,6 +6,7 @@ class Platform:
     def __init__(self,screen):
         self.screen = screen
         self.tilemap = None
+        self.sprites = None
     
     def start(self):
 
@@ -13,8 +14,15 @@ class Platform:
         clock = pygame.time.Clock()
         
         #load the tile map
-        self.tilemap = tmx.load('maps/map.tmx',self.screen.get_size())
+        self.tilemap = tmx.load('map.tmx',self.screen.get_size())
+        self.sprites = tmx.SpriteLayer()
+        
+        self.tilemap.layers.append(self.sprites)
 
+        #set view port
+        self.tilemap.set_focus(640,480)
+        
+        
         #main event loop of the game
         while True:
             
@@ -30,11 +38,15 @@ class Platform:
                 if event.type == pygame.KEYDOWN\
                    and event.key == pygame.K_ESCAPE:
                     return
+            
+            self.tilemap.update(delta_t/1000.,self)
+            self.tilemap.draw(self.screen)
+            pygame.display.flip()
+            
 
 if __name__ == '__main__':
     #init of pygame
     pygame.init()
     #set screen size
     screen = pygame.display.set_mode((640,480))
-    platform = Platform(screen)
-    platform.start()
+    Platform(screen).start()

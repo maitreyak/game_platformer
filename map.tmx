@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="bareland" tilewidth="32" tileheight="32">
-     <image source="images/bareland.png" width="96" height="64"/>
+  <image source="images/bareland.png" width="96" height="64"/>
  </tileset>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
    eJxjYBgFo2BgACOVzaKWeYwMlJvHiANTyxxSzSNkDinmEWsWMeaRYhYt8CigDAAAnNAASg==
   </data>
  </layer>
- <objectgroup color="#a40a09" name="floor" width="20" height="20">
+ <objectgroup color="#a40a09" name="floor" width="20" height="20" visible="0">
   <object name="floor" x="609" y="227" width="31" height="29"/>
   <object name="floor" x="578" y="259" width="31" height="29"/>
   <object name="floor" x="546" y="291" width="31" height="29"/>
