@@ -11,24 +11,64 @@
    </properties>
   </tile>
  </tileset>
+ <tileset firstgid="8" name="M" tilewidth="32" tileheight="32">
+  <image source="images/M.png" width="192" height="128"/>
+ </tileset>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2BgACOVzaKWeYwMlJvHiANTyxxSzSNkDrp57FQwixj3kWIWLfAooAwAAKvoAFE=
+   eJxjYBgFo2BgACOVzaKWeYwMlJvHiANTyxxSzSNkDinmEWsWMeaRYhYt8CigDAAAnNAASg==
   </data>
  </layer>
- <objectgroup color="#a40a09" name="floor" width="20" height="20">
+ <objectgroup color="#a40a09" name="triggers" width="20" height="20" visible="0">
   <properties>
    <property name="floor" value=""/>
   </properties>
   <object name="floor" x="609" y="227" width="31" height="29"/>
-  <object name="floor" x="578" y="259" width="31" height="29"/>
-  <object name="floor" x="546" y="291" width="31" height="29"/>
-  <object name="floor" x="448" y="323" width="99" height="25"/>
-  <object name="floor" x="385" y="356" width="68" height="28"/>
-  <object name="floor" x="321" y="388" width="67" height="30"/>
-  <object name="floor" x="289" y="419" width="31" height="29"/>
-  <object name="floor" x="256" y="451" width="31" height="29"/>
-  <object name="floor" x="1" y="484" width="254" height="30"/>
-  <object name="floor" x="609" y="229" width="31" height="29"/>
+  <object name="floor" x="578" y="259" width="31" height="29">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="546" y="291" width="31" height="29">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="448" y="323" width="99" height="25">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="385" y="356" width="68" height="28">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="321" y="388" width="67" height="30">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="289" y="419" width="31" height="29">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="256" y="451" width="31" height="29">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="1" y="484" width="254" height="30">
+   <properties>
+    <property name="floor" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="610" y="229" width="31" height="29"/>
+  <object name="player_start" gid="8" x="33" y="448">
+   <properties>
+    <property name="player" value=""/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
