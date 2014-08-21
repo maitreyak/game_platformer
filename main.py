@@ -118,7 +118,7 @@ class Platform(object):
         while True:
             
             #setting fps to 30 calls per second.
-            delta_t = clock.tick(30)
+            delta_t = clock.tick(40)
 
             #loop thru the events and pick the right one.
             for event in pygame.event.get():

@@ -16,15 +16,14 @@
  </tileset>
  <layer name="Tile Layer 1" width="20" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2BgACOVzaKWeYwMlJvHiANTyxxSzSNkDinmEWsWMeaRYhYt8CigDAAAnNAASg==
+   eJxjYBgF5ALGUfMGjXmMVDSPkYFy8xhxYGqZQ6p5hMwhxTxizSLGPFLMogUeBZQBAK8AAE4=
   </data>
  </layer>
- <objectgroup color="#a40a09" name="triggers" width="20" height="20" visible="0">
+ <objectgroup color="#a40a09" name="triggers" width="20" height="20">
   <properties>
    <property name="floor" value=""/>
   </properties>
-  <object name="floor" x="609" y="227" width="31" height="29"/>
-  <object name="floor" x="578" y="259" width="31" height="29">
+  <object name="floor" x="578" y="259" width="61" height="27">
    <properties>
     <property name="floor" value=""/>
    </properties>
@@ -64,10 +63,14 @@
     <property name="floor" value=""/>
    </properties>
   </object>
-  <object name="floor" x="610" y="229" width="31" height="29"/>
   <object name="player_start" gid="8" x="33" y="448">
    <properties>
     <property name="player" value=""/>
+   </properties>
+  </object>
+  <object name="floor" x="608" y="99" width="31" height="158">
+   <properties>
+    <property name="floor" value=""/>
    </properties>
   </object>
  </objectgroup>
