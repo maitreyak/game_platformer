@@ -37,10 +37,39 @@ class Opponent(pygame.sprite.Sprite):
 class Player(pygame.sprite.Sprite):
     def __init__(self, location, *groups):
         super(Player, self).__init__(*groups)
-        self.image = pygame.image.load('images/redblock.png')
+        self.walk_right = []
+        self.walk_left= []
+        self.walkIndex = 0
+        self.forward = True
+        
+        self.walk_right.append(pygame.image.load('images/walk_right/Hat_man1.png'))
+        self.walk_right.append(pygame.image.load('images/walk_right/Hat_man2.png'))
+        self.walk_right.append(pygame.image.load('images/walk_right/Hat_man3.png'))
+        self.walk_right.append(pygame.image.load('images/walk_right/Hat_man4.png'))
+        
+        self.walk_left.append(pygame.image.load('images/walk_left/Hat_man1.png'))
+        self.walk_left.append(pygame.image.load('images/walk_left/Hat_man2.png'))
+        self.walk_left.append(pygame.image.load('images/walk_left/Hat_man3.png'))
+        self.walk_left.append(pygame.image.load('images/walk_left/Hat_man4.png'))
+
+        self.image = pygame.image.load('images/walk_right/Hat_man1.png')
         self.rect = pygame.rect.Rect(location, self.image.get_size())
         self.resting = False
         self.dy = 0
+
+    def animate(self,direction):
+        walk = [self.walk_right,self.walk_left]
+        if(direction != self.forward):
+            self.forward = direction
+            self.walkIndex = 0
+            
+        if(direction):
+            walk = walk[0] 
+        else:
+            walk = walk[1]
+        
+        self.image = walk[self.walkIndex]
+        self.walkIndex = (self.walkIndex+1)%len(walk)
 
     def update(self, dt, game):
         last = self.rect.copy()
@@ -48,8 +77,10 @@ class Player(pygame.sprite.Sprite):
         key = pygame.key.get_pressed()
         if key[pygame.K_LEFT]:
             self.rect.x -= 300 * dt
+            self.animate(False)
         if key[pygame.K_RIGHT]:
             self.rect.x += 300 * dt
+            self.animate(True)
 
         if self.resting and key[pygame.K_SPACE]:
             self.dy = -500
