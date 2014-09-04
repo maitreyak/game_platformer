@@ -77,10 +77,12 @@ class Player(pygame.sprite.Sprite):
         key = pygame.key.get_pressed()
         if key[pygame.K_LEFT]:
             self.rect.x -= 300 * dt
-            self.animate(False)
+            if self.resting:
+                self.animate(False)
         if key[pygame.K_RIGHT]:
             self.rect.x += 300 * dt
-            self.animate(True)
+            if self.resting:
+                self.animate(True)
 
         if self.resting and key[pygame.K_SPACE]:
             self.dy = -500
